@@ -1,0 +1,60 @@
+Your task is to execute the process for proactive detection of fraud while answering following
+questions.
+1. Data cleaning including missing values, outliers and multi-collinearity.
+2. Describe your fraud detection model in elaboration.
+3. How did you select variables to be included in the model?
+4. Demonstrate the performance of the model by using best set of tools.
+5. What are the key factors that predict fraudulent customer?
+6. Do these factors make sense? If yes, How? If not, How not?
+7. What kind of prevention should be adopted while company update its infrastructure?
+8. Assuming these actions have been implemented, how would you determine if they work?
+Here are the brief answers to the given questions:
+
+
+1. Data Cleaning (Missing Values, Outliers, Multicollinearity):
+- Missing values were addressed through imputation as needed.  
+- Outliers were identified using the IQR method and either capped or removed as appropriate.  
+- Multicollinearity was assessed with a correlation matrix and VIF. Variables exhibiting high multicollinearity were either eliminated or transformed.
+
+
+2.Fraud Detection Model Description: 
+- Models used were Logistic Regression and Random Forest.  
+- Random Forest was selected for its superior ability to manage non-linearity and analyze feature importance.  
+- GridSearchCV was employed for hyperparameter optimization.
+
+3.Variable Selection Process: 
+- RandomForest feature importance and correlation analysis were utilized.  
+- Features with greater predictive power, such as transaction amount, time, and category, were retained.
+
+
+
+4. Model Performance Demonstration: 
+- Model performance was assessed using accuracy, precision, recall, F1-score, and confusion matrices.  
+- The ROC-AUC curve indicated high true positive rates and low false positive rates, reflecting strong model performance.
+
+
+
+5.Key Factors Predicting Fraud:
+- Transaction amount  
+- Time of transaction  
+- Merchant category  
+- Customer behavior patterns  
+- Location of transaction
+
+
+
+6.Validity of Key Factors:
+- The key factors make sense. Larger or atypical transactions frequently suggest fraud, and transactions occurring at unusual times or in high-risk merchant categories correspond with typical fraud patterns.
+
+7.Infrastructure Updates for Prevention:
+- Implement real-time monitoring of transactions.  
+- Set threshold alerts for suspicious activities.  
+- Establish a feedback loop to refine the model.  
+- Conduct regular audits of fraud detection systems.
+
+
+
+8.Monitoring the Effectiveness of Actions: 
+- Monitor flagged transactions to track false positives.  
+- Analyze customer feedback and fraud trends over time.  
+- Update the model regularly based on new patterns to maintain performance.  
